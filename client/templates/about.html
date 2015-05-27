@@ -1,0 +1,52 @@
+<template name="event">
+  <a href="{{path}}" class="item-activity">
+    <span class="attribution">
+      <span class="avatar">
+       <img src="http://blogs.msdn.com/blogfiles/willy-peter_schaub/windowslivewriter/attendingascrummastertrainingcourseaneve_1417c/clipart_of_16525_sm_2.jpg" class="image-avatar"> 
+      </span>
+      <span class="meta">
+        <span class="author">{{title}}</span> <br> <span class="recipe">{{content}}</span>
+        <br> {{#if place}}<span class="location">&mdash;{{place}} , {{date}}</span>{{/if}}
+      </span>
+    </span>
+  </a>
+</template>
+
+<template name="about">
+  <div class="page about">
+    {{> nav title='硅谷动态' black=true}}
+
+    <div class="content-scrollable">
+      <div class="bg-image about">
+        <h1 class="title-about2">
+          <img src="img/app/westlake-vc.png" alt="Go Local"/>
+        </h1>
+      </div>
+
+      <div class="list-activities">
+        {{#each events}}
+          {{> event}}
+        {{else}}
+          <div class="wrapper-message">
+            <div class="title-message"></div>
+            <div class="subtitle-message">项目加载中...</div>
+          </div>
+        {{/each}}
+      </div>
+      <!-- <a href="{{pathFor 'feed2'}}" class="btn-primary">查看所有硅谷活动</a> -->
+
+<!--
+      <br><br>
+      <a class="description-about" href="#">
+          <span class="attribution">
+            <span class="title-recipe">页面还在制作中</span>
+            <span class="metadata-recipe">
+              <span class="author-recipe">敬请期待</span>
+            </span>
+          </span>
+      </a>      
+-->
+
+    </div>
+  </div>
+</template>

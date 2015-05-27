@@ -1,0 +1,60 @@
+<template name="project">
+  <a href="{{path}}" class="item-activity">
+    <span class="attribution">
+      <span class="avatar">
+       <img src="{{userAvatar}}" class="image-avatar"> 
+      </span>
+      <span class="meta">
+        <span class="author">{{userName}}</span>  <br> <span class="recipe">{{text}}</span>
+       <!-- {{#if place}}<span class="location">&mdash;{{place}}</span>{{/if}} -->
+      </span>
+    </span>
+<!--
+    <div class="bg-image" style="background-image: url('{{image}}');"></div>
+-->
+  </a>
+</template>
+
+<template name="activity2">
+  <a href="{{path}}" class="item-activity">
+    <span class="attribution">
+      <span class="avatar">
+       <img src="{{userAvatar}}" class="image-avatar"> 
+      </span>
+      <span class="meta">
+        <span class="author">{{userName}}</span>  <br> <span class="recipe">{{text}} 项目</span>
+       <!-- {{#if place}}<span class="location">&mdash;{{place}}</span>{{/if}} -->
+      </span>
+    </span>
+<!--
+    <div class="bg-image" style="background-image: url('{{image}}');"></div>
+-->
+  </a>
+</template>
+
+<template name="recipes">
+  <div class="page whats-cooking">
+
+    {{>nav title="拟投项目列表"}}
+
+    <div class="content-scrollable">
+      <div class="list-activities {{#unless ready}}loading{{/unless}}">
+        {{#if true}}
+          {{#each activities}}
+            {{> activity2}}
+          {{else}}
+            <div class="wrapper-message">
+              <div class="title-message">No one is cooking yet!</div>
+              <div class="subtitle-message">Share that you made a recipe and it will show up here.</div>
+            </div>
+          {{/each}}
+        {{else}}
+          <div class="wrapper-message">
+            <div class="icon-sync"></div>
+            <div class="title-message">Loading</div>
+          </div>
+        {{/if}}
+      </div>
+    </div>
+  </div>
+</template>

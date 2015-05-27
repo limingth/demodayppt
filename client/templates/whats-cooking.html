@@ -1,0 +1,53 @@
+<template name="feed">
+  <div class="page whats-cooking">
+
+    {{>nav title="已投项目列表"}}
+
+    <div class="content-scrollable">
+      <div class="list-activities {{#unless ready}}loading{{/unless}}">
+        {{#if ready}}
+          {{#each activities}}
+            {{> activity}}
+          {{else}}
+            <div class="wrapper-message">
+              <div class="title-message">项目加载中....</div>
+              <div class="subtitle-message">请稍候</div>
+            </div>
+          {{/each}}
+        {{else}}
+          <div class="wrapper-message">
+            <div class="icon-sync"></div>
+            <div class="title-message">Loading</div>
+          </div>
+        {{/if}}
+      </div>
+    </div>
+  </div>
+</template>
+
+<template name="feed2">
+  <div class="page whats-cooking">
+
+    {{>nav title="拟投项目列表"}}
+
+    <div class="content-scrollable">
+      <div class="list-activities {{#unless ready}}loading{{/unless}}">
+        {{#if ready}}
+          {{#each activities}}
+            {{> activity}}
+          {{else}}
+            <div class="wrapper-message">
+              <div class="title-message">项目加载中....</div>
+              <div class="subtitle-message">请稍候</div>
+            </div>
+          {{/each}}
+        {{else}}
+          <div class="wrapper-message">
+            <div class="icon-sync"></div>
+            <div class="title-message">Loading</div>
+          </div>
+        {{/if}}
+      </div>
+    </div>
+  </div>
+</template>

@@ -1,0 +1,124 @@
+<template name="home">
+
+  <div class="page home">
+
+    {{>nav title='毛豆网简介' black=true}}
+
+    <div class="content-scrollable">
+      <div class="bg-image home">
+        <h1 class="title-home">
+          毛豆网@北京
+        </h1>
+        <span class="hours"><span class="title-callout">清华大学</span>
+        FIT楼</span>
+        <span class="arrow"></span>
+      </div>
+
+      <div class="callout-news">
+        <span class="title-callout">毛豆网精益创业孵化营简介</span> <br>
+      </div>
+
+      <div class="description-about">
+        <p>
+          移动互联网时代，实现两个版本的APP（iOS版和Android版）是最让新创项目领导者头疼的事，这就需要同时养活两个团队，造成巨大的成本和技术资源浪费。Meteor技术正是为应对此问题而生，为了减少开发者工作量，Meteor前后端只使用一种开发语言和开发框架， 一次开发处处运行，因此其诞生不到3年时间，就成为硅谷创业公司和新创项目的首选技术栈。
+        </p>
+        <p>
+          毛豆网在3月份成功组织了国内首个Meteor精益创业孵化营，最终在4月12日各个项目组在Demo day上展示了凝聚自己团队智慧的优秀作品 。一期孵化营中的一起跑、MeteorBB、i餐桌等项目已经初步开发出产品原型，接下来将朝商业化运营发展。
+        </p>
+      </div>
+
+     <div class="callout-news">
+        <span class="title-callout">清华x-lab介绍</span> <br>
+      </div>
+
+      <div class="description-about">
+        <p>
+        清华x-lab精益产品开发营由清华x-lab和毛豆网联合举办，毛豆网作为清华x-lab的合作伙伴将提供全程的教学服务。
+        </p>
+      </div>
+<!--
+      <div class="list-activities">
+        {{#each activities}}
+          {{> activity}}
+        {{else}}
+          <div class="wrapper-message">
+            <div class="title-message"></div>
+            <div class="subtitle-message">项目加载中...</div>
+          </div>
+        {{/each}}
+      </div>
+      <a href="{{pathFor 'feed'}}" class="btn-primary">查看所有已投项目</a>
+-->
+<!--
+      <h2 class="list-title">拟投项目</h2>
+      <div class="list-subtitle">新能源，医疗健康，机器人，智能设备</div>
+      <div class="list-recipes">
+        {{#each featuredRecipes}}
+          {{> recipeItem recipe=this size='small'}}
+        {{/each}}
+      </div>
+
+      <a href="{{pathFor 'recipes'}}" class="btn-primary">查看所有拟投项目</a>
+-->
+    </div>
+
+  </div>
+</template>
+
+<template name="home-old">
+  <div class="page home">
+
+    {{>nav title='赛伯乐硅谷简介' black=true}}
+
+    <div class="content-scrollable">
+      <div class="bg-image home">
+        <h1 class="title-home">
+          赛伯乐@硅谷
+          <!-- <img src="img/app/logo-local.svg" alt="赛伯乐硅谷"/> -->
+        </h1>
+        <span class="hours"><span class="title-callout">美国</span>
+        圣塔克拉拉</span>
+        <span class="arrow"></span>
+      </div>
+
+      <div class="callout-news">
+        <span class="title-callout">新闻动态</span> <br>
+      </div>
+
+      <div class="callout-news">
+        <a href="{{pathFor 'about'}}" > <span class="title-callout">杭州美国硅谷孵化器简介</span> </a>
+        <br>
+        <div class="title-message">
+        <a href="{{pathFor 'about2'}}" > <span class="title-callout">赛伯乐硅谷基金简介</span> </a>
+        </div>
+      </div>
+
+      <h2 class="list-title">已投项目</h2>
+      <div class="list-subtitle">大数据与云，智能设备</div>
+      <div class="list-activities">
+        {{#each activities}}
+          {{> activity}}
+        {{else}}
+          <div class="wrapper-message">
+            <div class="title-message"></div>
+            <div class="subtitle-message">项目加载中...</div>
+          </div>
+        {{/each}}
+      </div>
+      <a href="{{pathFor 'feed'}}" class="btn-primary">查看所有已投项目</a>
+
+<!--
+      <h2 class="list-title">拟投项目</h2>
+      <div class="list-subtitle">新能源，医疗健康，机器人，智能设备</div>
+      <div class="list-recipes">
+        {{#each featuredRecipes}}
+          {{> recipeItem recipe=this size='small'}}
+        {{/each}}
+      </div>
+
+      <a href="{{pathFor 'recipes'}}" class="btn-primary">查看所有拟投项目</a>
+-->
+    </div>
+
+  </div>
+</template>
